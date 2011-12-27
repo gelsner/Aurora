@@ -1,0 +1,21 @@
+<colors>
+	
+	<color name="HomeItemColor">FFFFFFFF</color>
+	<color name="HomeItemFocusedColor">FF7626C8</color>
+	<color name="HomeShadowColor">FF000000</color>
+
+	<color name="ListItemColor">FFFFFFFF</color>
+	<color name="ListItemFocusedColor">FF7626C8</color>
+	<color name="ListShadowColor">FF000000</color>
+	<color name="ListItemDisabledColor">99CCCCCC</color>
+
+	<color name="BackgroundDiffuse">22FFFFFF</color>
+	<color name="OSDBackgroundDiffuse">88FFFFFF</color>
+	<color name="DialogDiffuse">CFFFFFFF</color>
+
+	<color name="StarRatingDiffuse">FFFFFFFF</color>
+
+	<color name="SearchResult">FFFFFFFF</color>
+	<color name="SearchResultSmaller">FFFFFFFF</color>
+
+</colors>

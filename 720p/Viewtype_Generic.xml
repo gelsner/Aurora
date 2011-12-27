@@ -1,0 +1,202 @@
+<includes>
+	<include name="Viewtype_Generic">
+		<control type="group">
+			<visible>Control.IsVisible(503)</visible>
+			<include>Animation_WindowChanges</include>
+			<control type="fixedlist" id="503">
+				<viewtype>list</viewtype>
+				<posx>30</posx>
+				<posy>90</posy>
+				<width>700</width>
+				<height>540</height>
+				<onup>503</onup>
+				<ondown>503</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<focusposition>4</focusposition>
+				<movement>4</movement>
+				<scrolltime>200</scrolltime>
+				<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)</visible>
+				<include>Animation_MenuLevelChanges</include>
+				<itemlayout height="60">
+					<control type="label">
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>660</width>
+						<aligny>center</aligny>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						<textcolor>ListItemColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<font>ListItem</font>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>!Container.Content(songs) + !Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>660</width>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.TrackNumber]. [UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+						<textcolor>ListItemColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<font>ListItem</font>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>660</width>
+						<aligny>center</aligny>
+						<label>[UPPERCASE]$INFO[ListItem.album][/UPPERCASE]</label>
+						<textcolor>ListItemColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<font>ListItem</font>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>Container.Content(albums)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="label">
+						<include>Animation_HomeItem</include>
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>640</width>
+						<aligny>center</aligny>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						<textcolor>ListItemFocusedColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<font>ListItem</font>
+						<visible>!Container.Content(songs) + !Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<include>Animation_HomeItem</include>
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>640</width>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.TrackNumber]. [UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+						<textcolor>ListItemFocusedColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<font>ListItem</font>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<include>Animation_HomeItem</include>
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>640</width>
+						<aligny>center</aligny>
+						<label>[UPPERCASE]$INFO[ListItem.album][/UPPERCASE]</label>
+						<textcolor>ListItemFocusedColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<font>ListItem</font>
+						<visible>Container.Content(albums)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="group">
+
+				<control type="group" id="555">
+					<visible>Container.Content(albums) | Container.Content(songs)</visible>
+					<include>FadeInFadeOutOnVisible</include>
+					<control type="image">
+						<posx>705</posx>
+						<posy>70</posy>
+						<width>500</width>
+						<height>80</height>
+						<texture border="20">black.png</texture>
+						<colordiffuse>BackgroundDiffuse</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>725</posx>
+						<posy>110</posy>
+						<width>455</width>
+						<aligny>center</aligny>
+						<label>[B]$LOCALIZE[31102]:[/B] $INFO[ListItem.Artist]</label>
+						<textcolor>ListItemColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<font>GenericViewDetail</font>
+						<animation effect="slide" start="0,0" end="0,-14" time="200" tween="quadratic" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>725</posx>
+						<posy>124</posy>
+						<width>455</width>
+						<aligny>center</aligny>
+						<label>[B]$LOCALIZE[31103]:[/B] $INFO[ListItem.Album]</label>
+						<textcolor>ListItemColor</textcolor>
+						<shadowcolor>ListShadowColor</shadowcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<font>GenericViewDetail</font>
+						<visible>Container.Content(songs)</visible>
+						<include>FadeInFadeOutOnVisible</include>
+					</control>
+				</control>
+
+				<control type="group" id="556">
+					<visible>!IsEmpty(ListItem.Plot)</visible>
+					<include>FadeInFadeOutOnVisible</include>
+					<control type="image">
+						<posx>705</posx>
+						<posy>550</posy>
+						<width>500</width>
+						<height>130</height>
+						<texture border="20">black.png</texture>
+						<colordiffuse>BackgroundDiffuse</colordiffuse>
+					</control>
+					<control type="textbox">
+						<include>FadeInFadeOutOnVisible</include>
+						<posx>725</posx>
+						<posy>560</posy>
+						<width>460</width>
+						<height>110</height>
+						<align>left</align>
+						<info>ListItem.Plot</info>
+						<autoscroll time="3200" delay="6000" repeat="6000">true</autoscroll>
+						<font>Plot</font>
+						<textcolor>ListItemColor</textcolor>
+					</control>
+				</control>
+
+				<control type="group">
+					<animation effect="slide" start="0,0" end="0,50" time="200" tween="quadratic" condition="Control.IsVisible(555)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-70" time="200" tween="quadratic" condition="Control.IsVisible(556)">Conditional</animation>
+					<control type="image">
+						<posx>705</posx>
+						<posy>110</posy>
+						<width>500</width>
+						<height>500</height>
+						<texture border="50">black.png</texture>
+						<colordiffuse>BackgroundDiffuse</colordiffuse>
+					</control>
+					<control type="largeimage">
+						<posx>727</posx>
+						<posy>135</posy>
+						<width>450</width>
+						<height>450</height>
+						<texture diffuse="image_diffuse.png">$INFO[ListItem.icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<fadetime>300</fadetime>
+					</control>
+				</control>
+
+			</control>
+		</control>
+
+	</include>
+</includes>

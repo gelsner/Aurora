@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>490</posx>
+		<posy>5</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<include>Animation_WindowChanges</include>
+			<control type="image">
+	            <description>Background Overlay</description>
+				<posx>0</posx>
+				<posy>290</posy>
+				<width>350</width>
+				<height>120</height>
+				<texture border="20">black.png</texture>
+				<colordiffuse>DialogDiffuse</colordiffuse>
+	        </control>
+			<control type="label">
+				<posx>34</posx>
+				<posy>330</posy>
+				<width>282</width>
+				<label>$LOCALIZE[31400]: $INFO[Player.Volume]</label>
+				<font>OSDTitle</font>
+				<align>center</align>
+			</control>
+			<control type="progress" id="1">
+				<description>progress control</description>
+				<posx>34</posx>
+				<posy>365</posy>
+				<width>230</width>
+				<height>18</height>
+				<info>Player.Volume</info>
+			</control>
+		</control>
+	</controls>
+</window>

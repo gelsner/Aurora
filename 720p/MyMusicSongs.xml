@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<window id="501">
+	<defaultcontrol>503</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+ 	<views>503</views>
+	<controls>
+		<include>Global_Background</include>
+		<include>Viewtype_Generic</include>
+
+	</controls>	
+</window>

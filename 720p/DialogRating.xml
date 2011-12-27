@@ -1,0 +1,30 @@
+<window id="200">
+	<defaultcontrol always="true">10</defaultcontrol>
+    <controls>
+ 		<control type="group">
+			<include>DialogFadeInFadeOut</include>
+			<control type="image">
+	            <description>Background Overlay</description>
+				<posx>465</posx>
+				<posy>290</posy>
+				<width>350</width>
+				<height>95</height>
+				<texture border="20">black.png</texture>
+				<colordiffuse>DialogDiffuse</colordiffuse>
+	        </control>
+	
+	        <control type="group">
+	            <posx>448</posx>
+	            <posy>250</posy>
+	                     
+	            <control type="image" id="10">
+	                <posx>48</posx>
+	                <posy>50</posy>
+	                <texture>rating0.png</texture>
+	                <colordiffuse>StarRatingDiffuse</colordiffuse>
+	            </control>
+	
+	        </control>
+		</control>
+    </controls>
+</window>

@@ -1,0 +1,19 @@
+<!--Alaska-->
+
+<window id="24">
+	<defaultcontrol>503</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+ 	<views>503,504,505,506,507</views>
+	<controls>
+		<!--<include condition="!Container.Content(tvshows)">Viewtype_Generic</include>
+		<include condition="Container.Content(tvshows)">Viewtype_Banner</include>-->
+		<include>Global_Background</include>
+		<include>Viewtype_Generic</include>
+		<include>Viewtype_tvshows</include>
+		<include>Viewtype_seasons</include>
+		<include>Viewtype_movies</include>
+		<include>Viewtype_episodes</include>
+
+
+	</controls>	
+</window>

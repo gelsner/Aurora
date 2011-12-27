@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>DialogFadeInFadeOut</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+		<origin x="455" y="150"/>
+	</coordinates>
+	<controls>
+		<control type="image" id="997">
+			<description>background top image</description>
+			<posx>-50</posx>
+			<posy>-20</posy>
+			<width>450</width>
+			<height>450</height>
+			<texture border="50">black.png</texture>
+			<colordiffuse>DialogDiffuse</colordiffuse>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>-20</posx>
+			<posy>90</posy>
+			<width>380</width>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<window id="2901">
+	<defaultcontrol>14</defaultcontrol>
+	<controls>
+
+		<control type="group">
+			<include>Animation_WindowChanges</include>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="image">
+					<description>Panel</description>
+					<posx>20</posx>
+					<posy>20</posy>
+					<height>70</height>
+					<width>1240</width>
+					<texture border="20">black.png</texture>
+					<colordiffuse>OSDBackgroundDiffuse</colordiffuse>
+				</control>
+
+				<control type="grouplist" id="214">
+					<width>790</width>
+					<posx>249</posx>
+					<posy>10</posy>
+					<height>96</height>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="8">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_dvd.png</texturenofocus>
+						<texturefocus>osd/osd_button_dvd_fo.png</texturefocus>
+						<visible>VideoPlayer.HasMenu + Control.HasFocus(8)</visible>
+						<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+					</control>
+					<control type="button" id="11">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_skipbwd.png</texturenofocus>
+						<texturefocus>osd/osd_button_skipbwd_fo.png</texturefocus>
+						<onclick>XBMC.PlayerControl(Previous)</onclick>
+					</control>
+					<control type="button" id="12">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_rew.png</texturenofocus>
+						<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
+						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+					</control>
+					<control type="button" id="13">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_stop.png</texturenofocus>
+						<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
+						<onclick>XBMC.PlayerControl(Stop)</onclick>
+					</control>
+					<control type="button" id="14">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_play.png</texturenofocus>
+						<texturefocus>osd/osd_button_play_fo.png</texturefocus>
+						<onclick>XBMC.PlayerControl(Play)</onclick>
+					</control>
+					<control type="button" id="15">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_ff.png</texturenofocus>
+						<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
+						<onclick>XBMC.PlayerControl(Forward)</onclick>
+					</control>
+					<control type="button" id="16">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_skipfwd.png</texturenofocus>
+						<texturefocus>osd/osd_button_skipfwd_fo.png</texturefocus>
+						<onclick>XBMC.PlayerControl(Next)</onclick>
+					</control>
+					<control type="button" id="17">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_audio.png</texturenofocus>
+						<texturefocus>osd/osd_button_audio_fo.png</texturefocus>
+						<onclick>XBMC.ActivateWindow(124)</onclick>
+					</control>
+					<control type="button" id="18">
+						<width>88</width>
+						<height>88</height>
+						<texturenofocus>osd/osd_button_video.png</texturenofocus>
+						<texturefocus>osd/osd_button_video_fo.png</texturefocus>
+						<onclick>XBMC.ActivateWindow(123)</onclick>
+					</control>
+				</control>
+
+
+	
+				<!--<control type="grouplist" id="213">
+					<posx>40</posx>
+					<posy>30</posy>
+					<height>500</height>
+					<itemgap>0</itemgap>
+					<onup>213</onup>
+					<ondown>213</ondown>
+					<onleft>213</onleft>
+					<onright>213</onright>
+					<orientation>vertical</orientation>
+					<control type="button" id="1">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+						<visible>VideoPlayer.HasMenu</visible>
+						<label>$LOCALIZE[31200]</label>
+					</control>
+					<control type="button" id="2">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(Play)</onclick>
+						<label>$LOCALIZE[31201]</label>
+					</control>
+					<control type="button" id="4">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(Stop)</onclick>
+						<label>$LOCALIZE[31203]</label>
+					</control>
+					<control type="button" id="6">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(Next)</onclick>
+						<label>$LOCALIZE[31205]</label>
+					</control>
+					<control type="button" id="5">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(Previous)</onclick>
+						<label>$LOCALIZE[31204]</label>
+					</control>
+					<control type="button" id="8">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(Forward)</onclick>
+						<label>$LOCALIZE[31207]</label>
+					</control>
+					<control type="button" id="7">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+						<label>$LOCALIZE[31206]</label>
+					</control>
+					<control type="button" id="9">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.ActivateWindow(124)</onclick>
+						<label>$LOCALIZE[31208]</label>
+					</control>
+					<control type="button" id="10">
+						<include>Animation_HomeItem</include>
+						<width>590</width>
+						<onclick>XBMC.ActivateWindow(123)</onclick>
+						<label>$LOCALIZE[31209]</label>
+					</control>
+				</control>-->
+
+				<control type="image">
+					<description>Panel</description>
+					<posx>20</posx>
+					<posy>550</posy>
+					<height>159</height>
+					<width>1240</width>
+					<texture border="20">black.png</texture>
+					<colordiffuse>OSDBackgroundDiffuse</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+					<visible>!VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title]</label>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progressbar</description>
+					<posx>112</posx>
+					<posy>640</posy>
+					<width>1057</width>
+					<height>15</height>
+					<info>Player.Progress</info>
+					<visible>true</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>RWD 2X</label>
+					<visible>Player.Rewinding2x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>RWD 4X</label>
+					<visible>Player.Rewinding4x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>RWD 8X</label>
+					<visible>Player.Rewinding8x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>RWD 16X</label>
+					<visible>Player.Rewinding16x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>RWD 32X</label>
+					<visible>Player.Rewinding32x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>FWD 2X</label>
+					<visible>Player.Forwarding2x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>FWD 4X</label>
+					<visible>Player.Forwarding4x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>FWD 8X</label>
+					<visible>Player.Forwarding8x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>FWD 16X</label>
+					<visible>Player.Forwarding16x</visible>
+				</control>
+				<control type="label">
+					<posx>1040</posx>
+					<posy>560</posy>
+					<width>281</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>OSDTime</font>
+					<label>FWD 32X</label>
+					<visible>Player.Forwarding32x</visible>
+				</control>
+				<control type="label">
+					<posx>112</posx>
+					<posy>670</posy>
+					<width>300</width>
+					<height>25</height>
+					<font>OSDTime</font>
+					<label>$INFO[VideoPlayer.Time]</label>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>670</posy>
+					<width>1280</width>
+					<height>25</height>
+					<font>OSDTime</font>
+					<align>center</align>
+					<label>$LOCALIZE[31210] $INFO[Player.FinishTime]</label>
+				</control>
+				<control type="label">
+					<posx>1168</posx>
+					<posy>670</posy>
+					<width>300</width>
+					<height>25</height>
+					<font>OSDTime</font>
+					<align>right</align>
+					<label>$INFO[VideoPlayer.Duration]</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

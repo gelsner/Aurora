@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<window id="2003">
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<include>Animation_WindowChanges</include>
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>680</height>
+				<texture border="50">metal.png</texture>
+			</control>
+			<control type="image">
+				<posy>60</posy>
+				<posx>60</posx>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<width>390</width>
+				<height>600</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture diffuse="image_diffuse.png">$INFO[ListItem.Thumb]</texture>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Rating)</visible>
+				<control type="image">
+					<posx>1050</posx>
+					<posy>66</posy>
+					<width>170</width>
+					<height>45</height>
+					<texture border="20">black.png</texture>
+					<colordiffuse>BackgroundDiffuse</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>1062</posx>
+					<posy>70</posy>
+					<width>140</width>
+					<height>35</height>
+					<texture>$INFO[ListItem.StarRating]</texture>
+					<colordiffuse>StarRatingDiffuse</colordiffuse>
+				</control>
+			</control>
+			<control type="label">
+				<posy>90</posy>
+				<posx>470</posx>
+				<width>575</width>
+				<label>$INFO[ListItem.Title]</label>
+				<font>VideoInfoTitle</font>
+				<visible>!Container.Content(seasons)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>90</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$INFO[Container.SecondTitle] - $INFO[ListItem.Title]</label>
+				<font>VideoInfoTitle</font>
+				<visible>Container.Content(seasons)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>130</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$INFO[ListItem.Genre] ($INFO[ListItem.Year])</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>130</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$INFO[Container.Firsttitle]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>130</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$INFO[Container.ListItem.TVShowTitle]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>180</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31300]: $INFO[ListItem.Director]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>180</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31306]: $INFO[ListItem.Season]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>215</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31301]: $INFO[ListItem.Cast]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>215</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31307]: $INFO[ListItem.Episode]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>250</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31302]: $INFO[ListItem.Duration]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>250</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31308]: $INFO[ListItem.Date]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>180</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31303]: $INFO[ListItem.Episode]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>215</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31304]: $INFO[ListItem.Property(WatchedEpisodes)]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posy>250</posy>
+				<posx>470</posx>
+				<width>730</width>
+				<label>$LOCALIZE[31305]: $INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+				<font>VideoInfoGenre</font>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<scroll>true</scroll>
+			</control>
+
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Plot) | !IsEmpty(Container.Property(description))</visible>
+				<control type="image">
+					<posx>465</posx>
+					<posy>290</posy>
+					<width>750</width>
+					<height>245</height>
+					<texture border="20">black.png</texture>
+					<colordiffuse>BackgroundDiffuse</colordiffuse>
+				</control>
+				<control type="textbox">
+					<posx>485</posx>
+					<posy>305</posy>
+					<width>710</width>
+					<height>210</height>
+					<align>left</align>
+					<info>ListItem.Plot</info>
+					<autoscroll time="3200" delay="12000" repeat="6000">true</autoscroll>
+					<font>Plot</font>
+					<textcolor>ListItemColor</textcolor>
+				</control>
+				<control type="textbox">
+					<posx>485</posx>
+					<posy>305</posy>
+					<width>710</width>
+					<height>210</height>
+					<align>left</align>
+					<label>$INFO[Container.Property(description)]</label>
+					<autoscroll time="3200" delay="12000" repeat="6000">true</autoscroll>
+					<font>Plot</font>
+					<textcolor>ListItemColor</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+				<control type="image">
+					<posx>465</posx>
+					<posy>550</posy>
+					<width>750</width>
+					<height>100</height>
+					<texture border="20">black.png</texture>
+					<colordiffuse>BackgroundDiffuse</colordiffuse>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>610</posx>
+					<posy>585</posy>
+					<itemgap>60</itemgap>
+					<control type="image">
+						<description>Video Res</description>
+						<width min="1" max="95">auto</width>
+						<height>33</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag::videoResolution)]</texture>
+					</control>
+					<control type="image">
+						<description>Video Codec</description>
+						<width min="1" max="95">auto</width>
+						<height>33</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag::videoCodec)]</texture>
+					</control>
+					<control type="image">
+						<description>Audio Codec</description>
+						<width min="1" max="95">auto</width>
+						<height>33</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag::audioCodec)]</texture>
+					</control>
+					<control type="image">
+						<description>Audio Channels</description>
+						<width min="1" max="95">auto</width>
+						<height>33</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Property(mediaTag::audioChannels)]</texture>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

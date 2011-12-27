@@ -1,0 +1,79 @@
+<!--Alaska-->
+
+<window id="115">
+	<defaultcontrol>901</defaultcontrol>
+	<visible>Window.IsActive(2005) + !Window.IsActive(2901) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	<controls>
+		<control type="group">
+			<include>Animation_WindowChanges</include>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="image">
+					<description>Panel</description>
+					<posx>20</posx>
+					<posy>550</posy>
+					<height>159</height>
+					<width>1240</width>
+					<texture border="20">black.png</texture>
+					<colordiffuse>OSDBackgroundDiffuse</colordiffuse>
+				</control>
+	
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+					<visible>!VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title]</label>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progressbar</description>
+					<posx>112</posx>
+					<posy>640</posy>
+					<width>1057</width>
+					<height>15</height>
+					<info>Player.Progress</info>
+					<visible>true</visible>
+				</control>
+				<control type="label">
+					<posx>112</posx>
+					<posy>670</posy>
+					<width>300</width>
+					<height>25</height>
+					<font>OSDTime</font>
+					<label>$INFO[VideoPlayer.Time]</label>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>670</posy>
+					<width>1280</width>
+					<height>25</height>
+					<font>OSDTime</font>
+					<align>center</align>
+					<label>$LOCALIZE[31210] $INFO[Player.FinishTime]</label>
+				</control>
+				<control type="label">
+					<posx>1168</posx>
+					<posy>670</posy>
+					<width>300</width>
+					<height>25</height>
+					<font>OSDTime</font>
+					<align>right</align>
+					<label>$INFO[VideoPlayer.Duration]</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

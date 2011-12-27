@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<window id="12">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="group">
+			<include>Animation_WindowChanges</include>
+			<control type="image">
+				<posx>350</posx>
+				<posy>100</posy>
+				<width>850</width>
+				<height>520</height>
+				<texture border="50">black.png</texture>
+				<colordiffuse>BackgroundDiffuse</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="3">
+				<description>Button Area</description>
+				<posx>30</posx>
+				<posy>100</posy>
+				<width>300</width>
+				<height>520</height>
+				<itemgap>25</itemgap>
+				<onleft>-</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>360</posx>
+				<posy>110</posy>
+				<width>820</width>
+				<height>520</height>
+				<itemgap>9</itemgap>
+				<onleft>3</onleft>
+				<onright>-</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<textoffsetx>20</textoffsetx>
+				<align>left</align>
+				<font>ListItemSettings</font>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<height>50</height>
+				<width>820</width>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default Radio Button</description>
+				<textoffsetx>20</textoffsetx>
+				<align>left</align>
+				<font>ListItemSettings</font>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<height>50</height>
+				<width>820</width>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default Spin Control</description>
+				<textoffsetx>20</textoffsetx>
+				<align>left</align>
+				<font>ListItemSettings</font>
+				<texturefocus>button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<height>50</height>
+				<width>120</width>
+			</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<height>50</height>
+				<width>320</width>
+			</control>
+		</control>
+	</controls>
+</window>

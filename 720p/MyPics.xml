@@ -1,0 +1,12 @@
+<!--Alaska-->
+
+<window id="2">
+	<defaultcontrol>503</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+ 	<views>503</views>
+	<controls>
+		<include>Global_Background</include>
+		<include>Viewtype_Generic</include>
+
+	</controls>	
+</window>

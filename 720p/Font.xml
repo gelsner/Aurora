@@ -1,0 +1,152 @@
+<!--Alaska-->
+
+<fonts>
+
+	<fontset id="Default" unicode="true">
+
+		<!-- Default XBMC font --> 
+	 	<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>HomeMenuItem</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>HomeSubMenuItem</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>ListItem</name>
+			<filename>COAMEI_C.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>ListItemRegular</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>ListItemSettings</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
+			<name>ListItemOSD</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>SearchLabel</name>
+			<filename>COAMEI_C.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>Searchbutton</name>
+			<filename>COAMEI_C.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>SearchResult</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>SearchResultSmaller</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Plot</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Duration</name>
+			<filename>COAMEI_B.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>TvShowSeason</name>
+			<filename>COAMEI_B.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Settings</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>SettingsDetails</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>OSDTime</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>OSDTitle</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>27</size>
+		</font>
+
+		<font>
+			<name>VideoInfoTitle</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>VideoInfoGenre</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>GenericViewDetail</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>GenericViewDetailBig</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>Font_NP_title</name>
+			<filename>COAMEI_B.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>Font_NP_artist</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>Font_NP_album</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>Font_NP_rest</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>23</size>
+		</font>
+
+	</fontset>
+
+</fonts>

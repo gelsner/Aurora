@@ -1,0 +1,18 @@
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<include>Home_Menu</include>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>Home.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<include>Global_Time</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

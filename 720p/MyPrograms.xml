@@ -1,0 +1,77 @@
+<window id="1">
+	<views>505,55,503,58,54,59,506,507,503</views>
+	<defaultcontrol>503</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<include>Animation_CommonFade</include>
+			<animation effect="fade" start="100" end="60" time="400" condition="Window.IsVisible(movieinformation)">Conditional</animation>
+			<visible>!Skin.HasSetting(HideFanart) + [Control.IsVisible(505) | Control.IsVisible(55) | Control.IsVisible(503)]</visible>
+		</control>
+		<include condition="Skin.HasSetting(BackgroundVis) | Skin.HasSetting(BackgroundVid)">BackgroundVisuals</include>
+		<include>Viewtype_Files</include>
+		<include>Viewtype_List</include>
+		<include>Viewtype_Panel_Square</include>
+		<include>Viewtype_Panel_Tall</include>
+		<include>Viewtype_Panel_Wide</include>
+		<include>Viewtype_Info_List</include>
+		<include>Viewtype_Square_Wall</include>
+		<include>Viewtype_Poster_Wall</include>
+		<include>Global_ContextFilter</include>
+		<control type="grouplist" id="7000">
+			<width>400</width>
+			<height>80</height>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<itemgap>0</itemgap>
+			<include>Animation_ZoomInMenu</include>
+			<posx>540</posx>
+			<posy>330</posy>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+			<control type="button" id="20">
+				<label>-</label>
+				<onclick>Container.NextViewMode</onclick>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+			<control type="label" id="7200">
+				<label>$INFO[Container.ViewMode]</label>
+				<include>WindowMenuButton</include>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+		<control type="grouplist">
+			<width>400</width>
+			<height>40</height>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<itemgap>0</itemgap>
+			<include>Animation_ZoomInMenu</include>
+			<posx>540</posx>
+			<posy>300</posy>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31183]</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="75" time="200" />
+				</animation>
+			</control>
+		</control>
+		<include>Global_Time</include>
+		<include>Global_Heading</include>
+		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
+		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
+	</controls>
+</window>

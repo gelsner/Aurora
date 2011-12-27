@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<window id="50">
+	<controls>
+		<include>Global_Background</include>
+		<control type="group">
+			<include>Animation_WindowChanges</include>
+			<control type="group">
+				<visible>!MusicPlayer.NowPlayingFlipped</visible>
+				<animation effect="rotatey" center="640" start="0" end="-90" time="500" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="640" start="-90" end="0" time="500" delay="500" reversible="false">Visible</animation>
+				<control type="group">
+					<posx>127</posx>
+					<posy>188</posy>
+					<description>Current cover</description>
+					<visible>Player.HasMusicPlaylist</visible>
+					<control type="image">
+						<width>360</width>
+						<height>360</height>
+						<texture background="true" diffuse="image_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+						<fadetime>600</fadetime>
+						<aspectratio aligny="bottom" align="center">scale</aspectratio>
+					</control>
+				</control>
+				<control type="group">
+					<posx>579</posx>
+					<posy>278</posy>
+					<description>Current track info</description>
+					<control type="label">
+						<width>600</width>
+						<font>Font_NP_title</font>
+						<textcolor>ListItemFocusedColor</textcolor>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posy>43</posy>
+						<width>600</width>
+						<font>Font_NP_artist</font>
+						<textcolor>ListItemColor</textcolor>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posy>78</posy>
+						<width>600</width>
+						<font>Font_NP_album</font>
+						<textcolor>ListItemColor</textcolor>
+						<label>$INFO[MusicPlayer.Album]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>115</posy>
+						<width>500</width>
+						<font>Font_NP_rest</font>
+						<textcolor>ListItemColor</textcolor>
+						<label>$INFO[MusicPlayer.PlaylistPosition] of $INFO[MusicPlayer.PlaylistLength]</label>
+						<align>left</align>
+					</control>
+				</control>
+				<control type="group">
+					<posx>628</posx>
+					<posy>326</posy>
+					<description>Progress</description>
+					<control type="label">
+						<posy>142</posy>
+						<width>160</width>
+						<height>16</height>
+						<font>Font_NP_rest</font>
+						<align>right</align>
+						<label>$INFO[MusicPlayer.Time]</label>
+					</control>
+					<control type="label">
+						<posx>556</posx>
+						<posy>142</posy>
+						<width>160</width>
+						<height>16</height>
+						<font>Font_NP_rest</font>
+						<align>right</align>
+						<label>$INFO[MusicPlayer.Duration]</label>
+					</control>
+					<control type="progress" id="21">
+						<description>Progress control</description>
+						<posx>16</posx>
+						<posy>140</posy>
+						<aligny>center</aligny>
+						<width>474</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<visible>MusicPlayer.NowPlayingFlipped</visible>
+				<include>BackgroundNowPlaying</include>
+				<animation effect="rotatey" center="640" start="0" end="90" time="500" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="640" start="90" end="0" time="500" delay="500" reversible="false">Visible</animation>
+				<control type="group">
+					<posx>761</posx>
+					<posy>188</posy>
+					<control type="image">
+						<width>360</width>
+						<height>360</height>
+						<texture background="true" diffuse="image_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+						<fadetime>600</fadetime>
+						<aspectratio aligny="bottom" align="center">scale</aspectratio>
+					</control>
+				</control>
+				<control type="group">
+					<posx>101</posx>
+					<posy>278</posy>
+					<description>Current track info</description>
+					<control type="label">
+						<posx>600</posx>
+						<width>600</width>
+						<font>Font_NP_title</font>
+						<textcolor>ListItemFocusedColor</textcolor>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>43</posy>
+						<width>600</width>
+						<font>Font_NP_artist</font>
+						<textcolor>ListItemColor</textcolor>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>78</posy>
+						<width>600</width>
+						<font>Font_NP_album</font>
+						<textcolor>ListItemColor</textcolor>
+						<label>$INFO[MusicPlayer.Album]</label>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>115</posy>
+						<width>500</width>
+						<font>Font_NP_rest</font>
+						<textcolor>ListItemColor</textcolor>
+						<label>$INFO[MusicPlayer.PlaylistPosition] of $INFO[MusicPlayer.PlaylistLength]</label>
+						<align>right</align>
+					</control>
+				</control>
+				<control type="group">
+					<posx>144</posx>
+					<posy>326</posy>
+					<description>Progress</description>
+					<control type="label">
+						<posy>142</posy>
+						<width>160</width>
+						<height>16</height>
+						<font>Font_NP_rest</font>
+						<align>right</align>
+						<label>$INFO[MusicPlayer.Time]</label>
+					</control>
+					<control type="label">
+						<posx>556</posx>
+						<posy>142</posy>
+						<width>160</width>
+						<height>16</height>
+						<font>Font_NP_rest</font>
+						<align>right</align>
+						<label>$INFO[MusicPlayer.Duration]</label>
+					</control>
+					<control type="progress" id="21">
+						<description>Progress control</description>
+						<posx>16</posx>
+						<posy>140</posy>
+						<aligny>center</aligny>
+						<width>474</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
