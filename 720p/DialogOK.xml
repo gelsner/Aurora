@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<window id="101">
+<window id="2002">
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
@@ -61,16 +61,8 @@
 				<align>center</align>
 				<font>ListItemRegular</font>
 			</control>
-			<control type="progress" id="20">
-				<description>progress control</description>
-				<posx>340</posx>
-				<posy>450</posy>
-				<width>482</width>
-				<height>12</height>
-				<font>ListItemRegular</font>
-			</control>
 			<control type="button" id="10">
-				<label>222</label>
+				<label>186</label>
 				<width>640</width>
 				<posx>320</posx>
 				<posy>550</posy>

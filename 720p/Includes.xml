@@ -48,6 +48,14 @@
 		</control>
 	</include>
 
+	<include name="keyboardButton">
+		<font>KeyboardButton</font>
+		<width>48</width>
+		<height>48</height>
+		<align>center</align>
+		<textoffsety>10</textoffsety>
+	</include>
+
 	<include name="Home_Menu">
 		<control type="fixedlist" id="300">
 			<description>Home list</description>

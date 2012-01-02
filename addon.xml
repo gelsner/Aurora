@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.Aurora" version="0.9.0" name="Aurora" provider-name="someone">
+<addon id="skin.Aurora" version="0.9.1" name="Aurora" provider-name="someone">
 	<requires>
 		<import addon="xbmc.gui" version="3.00"/>
 	</requires>

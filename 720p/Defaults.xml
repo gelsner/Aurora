@@ -13,7 +13,7 @@
 		<scroll>false</scroll>
 		<align>left</align>
 		<selectedcolor>ListItemFocusedColor</selectedcolor>
-		<disabledcolor>-</disabledcolor>
+		<disabledcolor>ListItemColor</disabledcolor>
 	</default>
 
 	<default type="image">
@@ -27,7 +27,6 @@
 	</default>
 
 	<default type="button">
-		<include>Animation_SettingsButton</include>
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>500</width>
@@ -46,7 +45,6 @@
 	</default>
 
 	<default type="togglebutton">
-		<include>Animation_SettingsButton</include>
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>500</width>
@@ -60,10 +58,10 @@
 		<focusedcolor>ListItemFocusedColor</focusedcolor>
 		<disabledcolor>ListItemDisabledColor</disabledcolor>
 		<pulseonselect>false</pulseonselect>
-	    <texturenofocus>up.png</texturenofocus>
-		<texturefocus>up.png</texturefocus>
-		<alttexturenofocus>down.png</alttexturenofocus>
-		<alttexturefocus>down.png</alttexturefocus>
+	    <!--<texturenofocus>up.png</texturenofocus>
+		<texturefocus>up_fo.png</texturefocus>
+		<alttexturenofocus>down_fo.png</alttexturenofocus>
+		<alttexturefocus>down.png</alttexturefocus>-->
 		<textoffsetx>0</textoffsetx>
 	</default>
 

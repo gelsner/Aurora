@@ -42,6 +42,7 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="button" id="7">
+				<include>Animation_SettingsButton</include>
 				<description>Default Button</description>
 				<textoffsetx>20</textoffsetx>
 				<align>left</align>
@@ -72,6 +73,7 @@
 				<width>120</width>
 			</control>
 			<control type="button" id="10">
+				<include>Animation_SettingsButton</include>
 				<description>Default Category Button</description>
 				<height>50</height>
 				<width>320</width>

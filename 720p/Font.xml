@@ -65,6 +65,12 @@
 		</font>
 
 		<font>
+			<name>InputLabel</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>30</size>
+		</font>
+
+		<font>
 			<name>Plot</name>
 			<filename>COAMEI_R.ttf</filename>
 			<size>18</size>
@@ -91,6 +97,12 @@
 			<name>SettingsDetails</name>
 			<filename>COAMEI_R.ttf</filename>
 			<size>22</size>
+		</font>
+
+		<font>
+			<name>KeyboardButton</name>
+			<filename>COAMEI_R.ttf</filename>
+			<size>28</size>
 		</font>
 
 		<font>

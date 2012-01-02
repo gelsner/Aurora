@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">99</defaultcontrol>
 	<controls>
 		<control type="group">
+			<include>Animation_WindowChanges</include>
 			<control type="image">
 	            <description>Background Overlay</description>
 				<posx>415</posx>
