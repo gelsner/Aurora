@@ -369,11 +369,50 @@
 			<width>500</width>
 			<align>center</align>
 			<height>35</height>
-			<label>$INFO[Container(11001).ListItem.Season]x$INFO[Container(11001).ListItem.Episode] - $INFO[Container(11001).ListItem.Label]</label>
+			<label>(S0$INFO[Container(11001).ListItem.Season]E0$INFO[Container(11001).ListItem.Episode]) - $INFO[Container(11001).ListItem.Label]</label>
 			<font>ListItem</font>
 			<scroll>true</scroll>
 			<textcolor>ListItemColor</textcolor>
-			<visible>$INFO[Container(11001).ListItem.Type(episode)] + Control.HasFocus(11001)</visible>
+			<visible>$INFO[Container(11001).ListItem.Type(episode)] + Control.HasFocus(11001) + [StringCompare(Container(11001).ListItem.Season,0) | StringCompare(Container(11001).ListItem.Season,1) | StringCompare(Container(11001).ListItem.Season,2) | StringCompare(Container(11001).ListItem.Season,3) | StringCompare(Container(11001).ListItem.Season,4) | StringCompare(Container(11001).ListItem.Season,5) | StringCompare(Container(11001).ListItem.Season,6) | StringCompare(Container(11001).ListItem.Season,7) | StringCompare(Container(11001).ListItem.Season,8) | StringCompare(Container(11001).ListItem.Season,9)] + [StringCompare(Container(11001).ListItem.Episode,0) | StringCompare(Container(11001).ListItem.Episode,1) | StringCompare(Container(11001).ListItem.Episode,2) | StringCompare(Container(11001).ListItem.Episode,3) | StringCompare(Container(11001).ListItem.Episode,4) | StringCompare(Container(11001).ListItem.Episode,5) | StringCompare(Container(11001).ListItem.Episode,6) | StringCompare(Container(11001).ListItem.Episode,7) | StringCompare(Container(11001).ListItem.Episode,8) | StringCompare(Container(11001).ListItem.Episode,9)]</visible>
+			<include>FadeInFadeOutOnVisible</include>
+		</control>
+		<control type="label">
+			<posx>680</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<align>center</align>
+			<height>35</height>
+			<label>(S0$INFO[Container(11001).ListItem.Season]E$INFO[Container(11001).ListItem.Episode]) - $INFO[Container(11001).ListItem.Label]</label>
+			<font>ListItem</font>
+			<scroll>true</scroll>
+			<textcolor>ListItemColor</textcolor>
+			<visible>$INFO[Container(11001).ListItem.Type(episode)] + Control.HasFocus(11001) + [StringCompare(Container(11001).ListItem.Season,0) | StringCompare(Container(11001).ListItem.Season,1) | StringCompare(Container(11001).ListItem.Season,2) | StringCompare(Container(11001).ListItem.Season,3) | StringCompare(Container(11001).ListItem.Season,4) | StringCompare(Container(11001).ListItem.Season,5) | StringCompare(Container(11001).ListItem.Season,6) | StringCompare(Container(11001).ListItem.Season,7) | StringCompare(Container(11001).ListItem.Season,8) | StringCompare(Container(11001).ListItem.Season,9)] + ![StringCompare(Container(11001).ListItem.Episode,0) | StringCompare(Container(11001).ListItem.Episode,1) | StringCompare(Container(11001).ListItem.Episode,2) | StringCompare(Container(11001).ListItem.Episode,3) | StringCompare(Container(11001).ListItem.Episode,4) | StringCompare(Container(11001).ListItem.Episode,5) | StringCompare(Container(11001).ListItem.Episode,6) | StringCompare(Container(11001).ListItem.Episode,7) | StringCompare(Container(11001).ListItem.Episode,8) | StringCompare(Container(11001).ListItem.Episode,9)]</visible>
+			<include>FadeInFadeOutOnVisible</include>
+		</control>
+		<control type="label">
+			<posx>680</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<align>center</align>
+			<height>35</height>
+			<label>(S$INFO[Container(11001).ListItem.Season]E0$INFO[Container(11001).ListItem.Episode]) - $INFO[Container(11001).ListItem.Label]</label>
+			<font>ListItem</font>
+			<scroll>true</scroll>
+			<textcolor>ListItemColor</textcolor>
+			<visible>$INFO[Container(11001).ListItem.Type(episode)] + Control.HasFocus(11001) + ![StringCompare(Container(11001).ListItem.Season,0) | StringCompare(Container(11001).ListItem.Season,1) | StringCompare(Container(11001).ListItem.Season,2) | StringCompare(Container(11001).ListItem.Season,3) | StringCompare(Container(11001).ListItem.Season,4) | StringCompare(Container(11001).ListItem.Season,5) | StringCompare(Container(11001).ListItem.Season,6) | StringCompare(Container(11001).ListItem.Season,7) | StringCompare(Container(11001).ListItem.Season,8) | StringCompare(Container(11001).ListItem.Season,9)] + [StringCompare(Container(11001).ListItem.Episode,0) | StringCompare(Container(11001).ListItem.Episode,1) | StringCompare(Container(11001).ListItem.Episode,2) | StringCompare(Container(11001).ListItem.Episode,3) | StringCompare(Container(11001).ListItem.Episode,4) | StringCompare(Container(11001).ListItem.Episode,5) | StringCompare(Container(11001).ListItem.Episode,6) | StringCompare(Container(11001).ListItem.Episode,7) | StringCompare(Container(11001).ListItem.Episode,8) | StringCompare(Container(11001).ListItem.Episode,9)]</visible>
+			<include>FadeInFadeOutOnVisible</include>
+		</control>
+		<control type="label">
+			<posx>680</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<align>center</align>
+			<height>35</height>
+			<label>(S$INFO[Container(11001).ListItem.Season]E$INFO[Container(11001).ListItem.Episode]) - $INFO[Container(11001).ListItem.Label]</label>
+			<font>ListItem</font>
+			<scroll>true</scroll>
+			<textcolor>ListItemColor</textcolor>
+			<visible>$INFO[Container(11001).ListItem.Type(episode)] + Control.HasFocus(11001) + ![StringCompare(Container(11001).ListItem.Season,0) | StringCompare(Container(11001).ListItem.Season,1) | StringCompare(Container(11001).ListItem.Season,2) | StringCompare(Container(11001).ListItem.Season,3) | StringCompare(Container(11001).ListItem.Season,4) | StringCompare(Container(11001).ListItem.Season,5) | StringCompare(Container(11001).ListItem.Season,6) | StringCompare(Container(11001).ListItem.Season,7) | StringCompare(Container(11001).ListItem.Season,8) | StringCompare(Container(11001).ListItem.Season,9)] + ![StringCompare(Container(11001).ListItem.Episode,0) | StringCompare(Container(11001).ListItem.Episode,1) | StringCompare(Container(11001).ListItem.Episode,2) | StringCompare(Container(11001).ListItem.Episode,3) | StringCompare(Container(11001).ListItem.Episode,4) | StringCompare(Container(11001).ListItem.Episode,5) | StringCompare(Container(11001).ListItem.Episode,6) | StringCompare(Container(11001).ListItem.Episode,7) | StringCompare(Container(11001).ListItem.Episode,8) | StringCompare(Container(11001).ListItem.Episode,9)]</visible>
 			<include>FadeInFadeOutOnVisible</include>
 		</control>
 		<control type="label">
@@ -395,11 +434,50 @@
 			<width>500</width>
 			<align>center</align>
 			<height>35</height>
-			<label>$INFO[Container(11000).ListItem.Season]x$INFO[Container(11000).ListItem.Episode] - $INFO[Container(11000).ListItem.Label]</label>
+			<label>(S0$INFO[Container(11000).ListItem.Season]E0$INFO[Container(11000).ListItem.Episode]) - $INFO[Container(11000).ListItem.Label]</label>
 			<font>ListItem</font>
 			<scroll>true</scroll>
 			<textcolor>ListItemColor</textcolor>
-			<visible>$INFO[Container(11000).ListItem.Type(episode)] + Control.HasFocus(11000)</visible>
+			<visible>$INFO[Container(11000).ListItem.Type(episode)] + Control.HasFocus(11000) + [StringCompare(Container(11000).ListItem.Season,0) | StringCompare(Container(11000).ListItem.Season,1) | StringCompare(Container(11000).ListItem.Season,2) | StringCompare(Container(11000).ListItem.Season,3) | StringCompare(Container(11000).ListItem.Season,4) | StringCompare(Container(11000).ListItem.Season,5) | StringCompare(Container(11000).ListItem.Season,6) | StringCompare(Container(11000).ListItem.Season,7) | StringCompare(Container(11000).ListItem.Season,8) | StringCompare(Container(11000).ListItem.Season,9)] + [StringCompare(Container(11000).ListItem.Episode,0) | StringCompare(Container(11000).ListItem.Episode,1) | StringCompare(Container(11000).ListItem.Episode,2) | StringCompare(Container(11000).ListItem.Episode,3) | StringCompare(Container(11000).ListItem.Episode,4) | StringCompare(Container(11000).ListItem.Episode,5) | StringCompare(Container(11000).ListItem.Episode,6) | StringCompare(Container(11000).ListItem.Episode,7) | StringCompare(Container(11000).ListItem.Episode,8) | StringCompare(Container(11000).ListItem.Episode,9)]</visible>
+			<include>FadeInFadeOutOnVisible</include>
+		</control>
+		<control type="label">
+			<posx>680</posx>
+			<posy>560</posy>
+			<width>500</width>
+			<align>center</align>
+			<height>35</height>
+			<label>(S0$INFO[Container(11000).ListItem.Season]E$INFO[Container(11000).ListItem.Episode]) - $INFO[Container(11000).ListItem.Label]</label>
+			<font>ListItem</font>
+			<scroll>true</scroll>
+			<textcolor>ListItemColor</textcolor>
+			<visible>$INFO[Container(11000).ListItem.Type(episode)] + Control.HasFocus(11000) + [StringCompare(Container(11000).ListItem.Season,0) | StringCompare(Container(11000).ListItem.Season,1) | StringCompare(Container(11000).ListItem.Season,2) | StringCompare(Container(11000).ListItem.Season,3) | StringCompare(Container(11000).ListItem.Season,4) | StringCompare(Container(11000).ListItem.Season,5) | StringCompare(Container(11000).ListItem.Season,6) | StringCompare(Container(11000).ListItem.Season,7) | StringCompare(Container(11000).ListItem.Season,8) | StringCompare(Container(11000).ListItem.Season,9)] + ![StringCompare(Container(11000).ListItem.Episode,0) | StringCompare(Container(11000).ListItem.Episode,1) | StringCompare(Container(11000).ListItem.Episode,2) | StringCompare(Container(11000).ListItem.Episode,3) | StringCompare(Container(11000).ListItem.Episode,4) | StringCompare(Container(11000).ListItem.Episode,5) | StringCompare(Container(11000).ListItem.Episode,6) | StringCompare(Container(11000).ListItem.Episode,7) | StringCompare(Container(11000).ListItem.Episode,8) | StringCompare(Container(11000).ListItem.Episode,9)]</visible>
+			<include>FadeInFadeOutOnVisible</include>
+		</control>
+		<control type="label">
+			<posx>680</posx>
+			<posy>560</posy>
+			<width>500</width>
+			<align>center</align>
+			<height>35</height>
+			<label>(S$INFO[Container(11000).ListItem.Season]E0$INFO[Container(11000).ListItem.Episode]) - $INFO[Container(11000).ListItem.Label]</label>
+			<font>ListItem</font>
+			<scroll>true</scroll>
+			<textcolor>ListItemColor</textcolor>
+			<visible>$INFO[Container(11000).ListItem.Type(episode)] + Control.HasFocus(11000) + ![StringCompare(Container(11000).ListItem.Season,0) | StringCompare(Container(11000).ListItem.Season,1) | StringCompare(Container(11000).ListItem.Season,2) | StringCompare(Container(11000).ListItem.Season,3) | StringCompare(Container(11000).ListItem.Season,4) | StringCompare(Container(11000).ListItem.Season,5) | StringCompare(Container(11000).ListItem.Season,6) | StringCompare(Container(11000).ListItem.Season,7) | StringCompare(Container(11000).ListItem.Season,8) | StringCompare(Container(11000).ListItem.Season,9)] + [StringCompare(Container(11000).ListItem.Episode,0) | StringCompare(Container(11000).ListItem.Episode,1) | StringCompare(Container(11000).ListItem.Episode,2) | StringCompare(Container(11000).ListItem.Episode,3) | StringCompare(Container(11000).ListItem.Episode,4) | StringCompare(Container(11000).ListItem.Episode,5) | StringCompare(Container(11000).ListItem.Episode,6) | StringCompare(Container(11000).ListItem.Episode,7) | StringCompare(Container(11000).ListItem.Episode,8) | StringCompare(Container(11000).ListItem.Episode,9)]</visible>
+			<include>FadeInFadeOutOnVisible</include>
+		</control>
+		<control type="label">
+			<posx>680</posx>
+			<posy>560</posy>
+			<width>500</width>
+			<align>center</align>
+			<height>35</height>
+			<label>(S$INFO[Container(11000).ListItem.Season]E$INFO[Container(11000).ListItem.Episode]) - $INFO[Container(11000).ListItem.Label]</label>
+			<font>ListItem</font>
+			<scroll>true</scroll>
+			<textcolor>ListItemColor</textcolor>
+			<visible>$INFO[Container(11000).ListItem.Type(episode)] + Control.HasFocus(11000) + ![StringCompare(Container(11000).ListItem.Season,0) | StringCompare(Container(11000).ListItem.Season,1) | StringCompare(Container(11000).ListItem.Season,2) | StringCompare(Container(11000).ListItem.Season,3) | StringCompare(Container(11000).ListItem.Season,4) | StringCompare(Container(11000).ListItem.Season,5) | StringCompare(Container(11000).ListItem.Season,6) | StringCompare(Container(11000).ListItem.Season,7) | StringCompare(Container(11000).ListItem.Season,8) | StringCompare(Container(11000).ListItem.Season,9)] + ![StringCompare(Container(11000).ListItem.Episode,0) | StringCompare(Container(11000).ListItem.Episode,1) | StringCompare(Container(11000).ListItem.Episode,2) | StringCompare(Container(11000).ListItem.Episode,3) | StringCompare(Container(11000).ListItem.Episode,4) | StringCompare(Container(11000).ListItem.Episode,5) | StringCompare(Container(11000).ListItem.Episode,6) | StringCompare(Container(11000).ListItem.Episode,7) | StringCompare(Container(11000).ListItem.Episode,8) | StringCompare(Container(11000).ListItem.Episode,9)]</visible>
 			<include>FadeInFadeOutOnVisible</include>
 		</control>
 

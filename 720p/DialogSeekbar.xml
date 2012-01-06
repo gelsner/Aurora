@@ -35,8 +35,35 @@
 					<width>1100</width>
 					<font>OSDTitle</font>
 					<align>center</align>
-					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title]</label>
-					<visible>VideoPlayer.Content(episodes)</visible>
+					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title] (S0$INFO[VideoPlayer.Season]E0$INFO[VideoPlayer.Episode])</label>
+					<visible>VideoPlayer.Content(episodes) + [StringCompare(VideoPlayer.Season,0) | StringCompare(VideoPlayer.Season,1) | StringCompare(VideoPlayer.Season,2) | StringCompare(VideoPlayer.Season,3) | StringCompare(VideoPlayer.Season,4) | StringCompare(VideoPlayer.Season,5) | StringCompare(VideoPlayer.Season,6) | StringCompare(VideoPlayer.Season,7) | StringCompare(VideoPlayer.Season,8) | StringCompare(VideoPlayer.Season,9)] + [StringCompare(VideoPlayer.Episode,0) | StringCompare(VideoPlayer.Episode,1) | StringCompare(VideoPlayer.Episode,2) | StringCompare(VideoPlayer.Episode,3) | StringCompare(VideoPlayer.Episode,4) | StringCompare(VideoPlayer.Episode,5) | StringCompare(VideoPlayer.Episode,6) | StringCompare(VideoPlayer.Episode,7) | StringCompare(VideoPlayer.Episode,8) | StringCompare(VideoPlayer.Episode,9)]</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title] (S0$INFO[VideoPlayer.Season]E$INFO[VideoPlayer.Episode])</label>
+					<visible>VideoPlayer.Content(episodes) + [StringCompare(VideoPlayer.Season,0) | StringCompare(VideoPlayer.Season,1) | StringCompare(VideoPlayer.Season,2) | StringCompare(VideoPlayer.Season,3) | StringCompare(VideoPlayer.Season,4) | StringCompare(VideoPlayer.Season,5) | StringCompare(VideoPlayer.Season,6) | StringCompare(VideoPlayer.Season,7) | StringCompare(VideoPlayer.Season,8) | StringCompare(VideoPlayer.Season,9)] + ![StringCompare(VideoPlayer.Episode,0) | StringCompare(VideoPlayer.Episode,1) | StringCompare(VideoPlayer.Episode,2) | StringCompare(VideoPlayer.Episode,3) | StringCompare(VideoPlayer.Episode,4) | StringCompare(VideoPlayer.Episode,5) | StringCompare(VideoPlayer.Episode,6) | StringCompare(VideoPlayer.Episode,7) | StringCompare(VideoPlayer.Episode,8) | StringCompare(VideoPlayer.Episode,9)]</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title] (S$INFO[VideoPlayer.Season]E0$INFO[VideoPlayer.Episode])</label>
+					<visible>VideoPlayer.Content(episodes) + ![StringCompare(VideoPlayer.Season,0) | StringCompare(VideoPlayer.Season,1) | StringCompare(VideoPlayer.Season,2) | StringCompare(VideoPlayer.Season,3) | StringCompare(VideoPlayer.Season,4) | StringCompare(VideoPlayer.Season,5) | StringCompare(VideoPlayer.Season,6) | StringCompare(VideoPlayer.Season,7) | StringCompare(VideoPlayer.Season,8) | StringCompare(VideoPlayer.Season,9)] + [StringCompare(VideoPlayer.Episode,0) | StringCompare(VideoPlayer.Episode,1) | StringCompare(VideoPlayer.Episode,2) | StringCompare(VideoPlayer.Episode,3) | StringCompare(VideoPlayer.Episode,4) | StringCompare(VideoPlayer.Episode,5) | StringCompare(VideoPlayer.Episode,6) | StringCompare(VideoPlayer.Episode,7) | StringCompare(VideoPlayer.Episode,8) | StringCompare(VideoPlayer.Episode,9)]</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>600</posy>
+					<width>1100</width>
+					<font>OSDTitle</font>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.TVShowTitle] - $INFO[VideoPlayer.Title] (S$INFO[VideoPlayer.Season]E$INFO[VideoPlayer.Episode])</label>
+					<visible>VideoPlayer.Content(episodes) + ![StringCompare(VideoPlayer.Season,0) | StringCompare(VideoPlayer.Season,1) | StringCompare(VideoPlayer.Season,2) | StringCompare(VideoPlayer.Season,3) | StringCompare(VideoPlayer.Season,4) | StringCompare(VideoPlayer.Season,5) | StringCompare(VideoPlayer.Season,6) | StringCompare(VideoPlayer.Season,7) | StringCompare(VideoPlayer.Season,8) | StringCompare(VideoPlayer.Season,9)] + ![StringCompare(VideoPlayer.Episode,0) | StringCompare(VideoPlayer.Episode,1) | StringCompare(VideoPlayer.Episode,2) | StringCompare(VideoPlayer.Episode,3) | StringCompare(VideoPlayer.Episode,4) | StringCompare(VideoPlayer.Episode,5) | StringCompare(VideoPlayer.Episode,6) | StringCompare(VideoPlayer.Episode,7) | StringCompare(VideoPlayer.Episode,8) | StringCompare(VideoPlayer.Episode,9)]</visible>
 				</control>
 				<control type="progress" id="23">
 					<description>Progressbar</description>
